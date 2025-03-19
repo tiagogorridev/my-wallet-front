@@ -17,10 +17,12 @@ import { CarteiraConfiguracoesComponent } from './features/investidor/investidor
 
 // Pages (todos os usuários)
 import { LoginComponent } from './features/pages/login/login.component';
+import { CadastroComponent } from './features/pages/cadastro/cadastro.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'cadastro', component: CadastroComponent },
 
   // Rotas do Administrador
   {

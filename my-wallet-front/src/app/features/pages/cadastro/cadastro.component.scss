@@ -1,0 +1,198 @@
+$dark: #1e1f26;
+$ambar: #F39C12;
+$gray: #6b7280;
+$text-gray: #a9b0bb;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
+.cadastro-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.cadastro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: white;
+  padding: 20px;
+}
+
+.welcome-message {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome-message h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: $gray;
+}
+
+.welcome-message h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: $text-gray;
+}
+
+.cadastro-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: $gray;
+}
+
+.password-toggle:hover {
+  color: $dark;
+}
+
+.input-field {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid $text-gray;
+  border-radius: 5px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.input-field:focus + label,
+.input-field:not(:placeholder-shown) + label {
+  top: 5px;
+  font-size: 12px;
+  color: $gray;
+}
+
+.cadastro-btn button {
+  width: 100%;
+  padding: 10px 80px;
+  background-color: $ambar;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cadastro-btn i {
+  margin-right: 8px;
+}
+
+.cadastro-btn button:hover {
+  background-color: $ambar;
+}
+
+.no-account {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.no-account a {
+  font-size: 14px;
+  color: $ambar;
+  text-decoration: none;
+}
+
+.no-account a:hover {
+  text-decoration: underline;
+}
+
+.cadastro-background {
+  width: 50%;
+  background-image: url('../../../../assets/imagens/login-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+::ng-deep {
+  .p-calendar {
+    width: 100%;
+    .p-inputtext {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid $ambar;
+      border-radius: 6px;
+      font-size: 14px;
+      &:focus {
+        outline: none;
+        border-color: $ambar;
+        box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.1);
+      }
+    }
+    .p-button {
+      background-color: $ambar;
+      border: 1px solid $ambar;
+      color: #fff;
+      &:hover {
+        background-color: $ambar;
+      }
+    }
+  }
+
+  /* Adicione essas regras para corrigir o calendário */
+  .p-datepicker {
+    background-color: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
+
+    .p-datepicker-header {
+      background-color: white !important;
+      border-bottom: 1px solid #f0f0f0 !important;
+    }
+
+    .p-datepicker-calendar {
+      background-color: white !important;
+      th {
+        color: $gray !important;
+      }
+      td {
+        background-color: white !important;
+      }
+    }
+
+    .p-datepicker-buttonbar {
+      background-color: white !important;
+      border-top: 1px solid #f0f0f0 !important;
+    }
+  }
+}
