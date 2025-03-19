@@ -7,7 +7,13 @@ import { AdminProfileComponent } from './features/admin/admin-profile/admin-prof
 
 // Investidor
 import { InvestidorProfileComponent } from './features/investidor/investidor-profile/investidor-profile.component';
-import { InvestidorWalletComponent } from './features/investidor/investidor-wallet/investidor-wallet.component';
+import { InvestidorHomeComponent } from './features/investidor/investidor-home/investidor-home.component';
+import { CarteiraResumoComponent } from './features/investidor/investidor-carteira/carteira-resumo/carteira-resumo.component';
+import { CarteiraProventosComponent } from './features/investidor/investidor-carteira/carteira-proventos/carteira-proventos.component';
+import { CarteiraGraficosComponent } from './features/investidor/investidor-carteira/carteira-graficos/carteira-graficos.component';
+import { CarteiraMetasComponent } from './features/investidor/investidor-carteira/carteira-metas/carteira-metas.component';
+import { CarteiraLancamentosComponent } from './features/investidor/investidor-carteira/carteira-lancamentos/carteira-lancamentos.component';
+import { CarteiraConfiguracoesComponent } from './features/investidor/investidor-carteira/carteira-configuracoes/carteira-configuracoes.component';
 
 // Pages (todos os usuários)
 import { LoginComponent } from './features/pages/login/login.component';
@@ -32,7 +38,13 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'profile', pathMatch: 'full' },
       { path: 'profile', component: InvestidorProfileComponent },
-      { path: 'wallet', component: InvestidorWalletComponent }
+      { path: 'home', component: InvestidorHomeComponent },
+      { path: 'carteira-resumo', component: CarteiraResumoComponent },
+      { path: 'carteira-proventos', component: CarteiraProventosComponent },
+      { path: 'carteira-graficos', component: CarteiraGraficosComponent },
+      { path: 'carteira-metas', component: CarteiraMetasComponent },
+      { path: 'carteira-lancamentos', component: CarteiraLancamentosComponent },
+      { path: 'carteira-configuracoes', component: CarteiraConfiguracoesComponent }
     ],
   },
 
