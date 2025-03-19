@@ -6,3 +6,4 @@
 - Package Manager: npm 10.8.2
 
 ## Backend
+- Java: 17
