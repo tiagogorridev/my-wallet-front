@@ -18,7 +18,15 @@
         </div>
         <div class="form-group calendar-container">
           <label for="dataNascimento"></label>
-          <p-calendar  name="dataInicio" [showIcon]="true" [showButtonBar]="true" [touchUI]="false" dateFormat="dd/mm/yy" [required]="true"></p-calendar>
+          <input
+            type="date"
+            id="dataNascimento"
+            name="dataNascimento"
+            [(ngModel)]="startDate"
+            class="input-field"
+            placeholder="Data de Nascimento"
+            required
+          >
         </div>
         <div class="form-group">
           <label for="email"></label>

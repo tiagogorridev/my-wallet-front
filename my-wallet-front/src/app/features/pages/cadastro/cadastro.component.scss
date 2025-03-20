@@ -64,6 +64,15 @@ html, body {
   width: 100%;
 }
 
+.calendar-container input[type="date"] {
+  width: 100%;
+  font-size: 16px;
+  padding: 9px;
+  border: 1px solid $text-gray;
+  border-radius: 5px;
+  color: $gray;
+}
+
 .password-group {
   position: relative;
 }
@@ -117,7 +126,7 @@ html, body {
 }
 
 .cadastro-btn button:hover {
-  background-color: $ambar;
+  background-color: darken($ambar, 5%);
 }
 
 .no-account {
@@ -126,6 +135,7 @@ html, body {
 }
 
 .no-account a {
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: $ambar;
   text-decoration: none;
@@ -142,57 +152,4 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-}
-
-::ng-deep {
-  .p-calendar {
-    width: 100%;
-    .p-inputtext {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid $ambar;
-      border-radius: 6px;
-      font-size: 14px;
-      &:focus {
-        outline: none;
-        border-color: $ambar;
-        box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.1);
-      }
-    }
-    .p-button {
-      background-color: $ambar;
-      border: 1px solid $ambar;
-      color: #fff;
-      &:hover {
-        background-color: $ambar;
-      }
-    }
-  }
-
-  /* Adicione essas regras para corrigir o calendário */
-  .p-datepicker {
-    background-color: white !important;
-    border: 1px solid #ddd !important;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
-
-    .p-datepicker-header {
-      background-color: white !important;
-      border-bottom: 1px solid #f0f0f0 !important;
-    }
-
-    .p-datepicker-calendar {
-      background-color: white !important;
-      th {
-        color: $gray !important;
-      }
-      td {
-        background-color: white !important;
-      }
-    }
-
-    .p-datepicker-buttonbar {
-      background-color: white !important;
-      border-top: 1px solid #f0f0f0 !important;
-    }
-  }
 }
