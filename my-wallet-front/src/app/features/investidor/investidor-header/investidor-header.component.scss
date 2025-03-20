@@ -128,3 +128,43 @@
     cursor: pointer;
   }
 }
+
+.nav-menu {
+  display: flex;
+  background-color: $dark-lighter;
+  border-bottom: 1px solid $dark-lightest;
+  padding: 0 20px;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $ambar;
+  }
+}
+
+.nav-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: $gray;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+
+  i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    color: $light-gray;
+  }
+
+  &.active {
+    color: $ambar;
+    border-bottom: 2px solid $ambar;
+  }
+}

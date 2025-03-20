@@ -47,3 +47,34 @@
     <i class="pi pi-user"></i>
   </div>
 </header>
+
+<nav class="nav-menu">
+  <div class="nav-item" [routerLink]="['/investidor/carteira-resumo']" routerLinkActive="active">
+    <i class="pi pi-home"></i>
+    <span>RESUMO</span>
+  </div>
+  <div class="nav-item" [routerLink]="['/investidor/carteira-proventos']" routerLinkActive="active">
+    <i class="pi pi-chart-bar"></i>
+    <span>PROVENTOS</span>
+  </div>
+  <div class="nav-item" [routerLink]="['/investidor/carteira-graficos']" routerLinkActive="active">
+    <i class="pi pi-chart-line"></i>
+    <span>GRÁFICOS</span>
+  </div>
+  <div class="nav-item" [routerLink]="['/investidor/carteira-metas']" routerLinkActive="active">
+    <i class="pi pi-flag"></i>
+    <span>METAS</span>
+  </div>
+  <div class="nav-item" [routerLink]="['/investidor/carteira-analise']" routerLinkActive="active">
+    <i class="pi pi-search"></i>
+    <span>ANÁLISE</span>
+  </div>
+  <div class="nav-item" [routerLink]="['/investidor/carteira-lancamentos']" routerLinkActive="active">
+    <i class="pi pi-list"></i>
+    <span>LANÇAMENTOS</span>
+  </div>
+  <div class="nav-item" [routerLink]="['/investidor/carteira-configuracoes']" routerLinkActive="active">
+    <i class="pi pi-cog"></i>
+    <span>CONFIGURAÇÕES</span>
+  </div>
+</nav>
