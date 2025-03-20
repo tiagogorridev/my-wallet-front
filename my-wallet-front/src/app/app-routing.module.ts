@@ -14,6 +14,7 @@ import { CarteiraGraficosComponent } from './features/investidor/investidor-cart
 import { CarteiraMetasComponent } from './features/investidor/investidor-carteira/carteira-metas/carteira-metas.component';
 import { CarteiraLancamentosComponent } from './features/investidor/investidor-carteira/carteira-lancamentos/carteira-lancamentos.component';
 import { CarteiraConfiguracoesComponent } from './features/investidor/investidor-carteira/carteira-configuracoes/carteira-configuracoes.component';
+import { CarteiraAnaliseComponent } from './features/investidor/investidor-carteira/carteira-analise/carteira-analise.component';
 
 // Pages (todos os usuários)
 import { LoginComponent } from './features/pages/login/login.component';
@@ -46,7 +47,8 @@ const routes: Routes = [
       { path: 'carteira-graficos', component: CarteiraGraficosComponent },
       { path: 'carteira-metas', component: CarteiraMetasComponent },
       { path: 'carteira-lancamentos', component: CarteiraLancamentosComponent },
-      { path: 'carteira-configuracoes', component: CarteiraConfiguracoesComponent }
+      { path: 'carteira-configuracoes', component: CarteiraConfiguracoesComponent },
+      { path: 'carteira-analise', component: CarteiraAnaliseComponent }
     ],
   },
 

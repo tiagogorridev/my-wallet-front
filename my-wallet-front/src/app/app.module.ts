@@ -19,6 +19,8 @@ import { CarteiraLancamentosComponent } from './features/investidor/investidor-c
 import { CarteiraConfiguracoesComponent } from './features/investidor/investidor-carteira/carteira-configuracoes/carteira-configuracoes.component';
 import { CadastroComponent } from './features/pages/cadastro/cadastro.component';
 import { ButtonModule } from 'primeng/button';
+import { CarteiraAnaliseComponent } from './features/investidor/investidor-carteira/carteira-analise/carteira-analise.component';
+import { InvestidorHeaderComponent } from './features/investidor/investidor-header/investidor-header.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ButtonModule } from 'primeng/button';
     CarteiraLancamentosComponent,
     CarteiraConfiguracoesComponent,
     CadastroComponent,
+    CarteiraAnaliseComponent,
+    InvestidorHeaderComponent,
   ],
   imports: [
     BrowserModule,

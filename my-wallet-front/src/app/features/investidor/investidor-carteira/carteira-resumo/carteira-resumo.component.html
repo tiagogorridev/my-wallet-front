@@ -1,83 +1,59 @@
-<!-- Header da aplicação -->
-<div class="header">
-  <div class="logo">
-    <h1>MyWallet</h1>
-  </div>
-  <div class="investment-summary">
-    <div class="summary-item">
-      <span class="summary-label">VALOR APLICADO</span>
-      <span class="summary-value">R$ 10.000,00</span>
+<app-investidor-header></app-investidor-header>
+<div class="dashboard-container">
+  <nav class="nav-menu">
+    <div class="nav-item" [routerLink]="['/investidor/carteira-resumo']" routerLinkActive="active">
+      <i class="pi pi-home"></i>
+      <span>RESUMO</span>
     </div>
-    <div class="summary-item">
-      <span class="summary-label">SALDO BRUTO</span>
-      <span class="summary-value">R$ 10.000,00</span>
+    <div class="nav-item" [routerLink]="['/investidor/carteira-proventos']" routerLinkActive="active">
+      <i class="pi pi-chart-bar"></i>
+      <span>PROVENTOS</span>
     </div>
-    <div class="summary-item">
-      <span class="summary-label">VARIAÇÃO</span>
-      <span class="summary-value negative">0,00%</span>
+    <div class="nav-item" [routerLink]="['/investidor/carteira-graficos']" routerLinkActive="active">
+      <i class="pi pi-chart-line"></i>
+      <span>GRÁFICOS</span>
     </div>
-  </div>
-  <div class="portfolio-selector">
-    <span>Carteiras</span>
-    <div class="current-portfolio">Carteira Principal</div>
-  </div>
-  <div class="add-asset-btn">
-    <button>Adicionar Ativo</button>
-  </div>
-  <div class="user-profile">
-    <div class="user-icon">
-      <!-- Ícone do usuário aqui -->
+    <div class="nav-item" [routerLink]="['/investidor/carteira-metas']" routerLinkActive="active">
+      <i class="pi pi-flag"></i>
+      <span>METAS</span>
     </div>
-  </div>
-</div>
+    <div class="nav-item" [routerLink]="['/investidor/carteira-analise']" routerLinkActive="active">
+      <i class="pi pi-search"></i>
+      <span>ANÁLISE</span>
+    </div>
+    <div class="nav-item" [routerLink]="['/investidor/carteira-lancamentos']" routerLinkActive="active">
+      <i class="pi pi-list"></i>
+      <span>LANÇAMENTOS</span>
+    </div>
+    <div class="nav-item" [routerLink]="['/investidor/carteira-configuracoes']" routerLinkActive="active">
+      <i class="pi pi-cog"></i>
+      <span>CONFIGURAÇÕES</span>
+    </div>
+  </nav>
 
-<!-- Menu de navegação -->
-<div class="nav-menu">
-  <div class="nav-item active">RESUMO</div>
-  <div class="nav-item">PROVENTOS</div>
-  <div class="nav-item">GRÁFICOS</div>
-  <div class="nav-item">METAS</div>
-  <div class="nav-item">ANÁLISE</div>
-  <div class="nav-item">LANÇAMENTOS</div>
-  <div class="nav-item">IRPF</div>
-  <div class="nav-item">INTEGRAÇÃO B3</div>
-  <div class="nav-item premium">PRO</div>
-  <div class="nav-item">CONFIGURAÇÕES</div>
-</div>
-
-<!-- Conteúdo principal -->
-<div class="main-content">
-  <!-- Seção de evolução do patrimônio -->
-  <div class="chart-section">
-    <div class="section-header">
-      <h2>Evolução do Patrimônio</h2>
-      <div class="filters">
-        <div class="filter-dropdown">
-          <span>12 MESES</span>
-          <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="filter-dropdown">
-          <span>TODOS OS TIPOS</span>
-          <span class="dropdown-icon">▼</span>
+  <main class="main-content">
+    <section class="chart-section">
+      <div class="section-header">
+        <h2>Evolução do Patrimônio</h2>
+        <div class="filters">
+          <div class="filter-dropdown">
+            <span>12 MESES</span>
+            <span class="dropdown-icon">▼</span>
+          </div>
+          <div class="filter-dropdown">
+            <span>TODOS OS TIPOS</span>
+            <span class="dropdown-icon">▼</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="chart-container">
-      <!-- Aqui estaria o gráfico de evolução do patrimônio -->
-      <div class="chart-placeholder">
-        <!-- Placeholder para o gráfico -->
-      </div>
-    </div>
-  </div>
+      <div class="chart-container"></div>
+    </section>
 
-  <!-- Seção de ativos na carteira -->
-  <div class="assets-distribution">
-    <div class="section-header">
-      <h2>Ativos na carteira</h2>
-    </div>
-    <div class="pie-chart-container">
-      <!-- Placeholder para o gráfico de pizza -->
-      <div class="pie-chart-placeholder">
+    <section class="assets-distribution">
+      <div class="section-header">
+        <h2>Ativos na carteira</h2>
+      </div>
+      <div class="pie-chart-container">
         <div class="pie-chart-legend">
           <div class="legend-item">
             <span class="legend-color crypto"></span>
@@ -89,85 +65,81 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+    </section>
+  </main>
 
-<!-- Seção de ativos -->
-<div class="assets-section">
-  <div class="assets-header">
-    <h2>Ativos</h2>
-    <button class="add-asset-btn-secondary">Adicionar Ativo +</button>
-  </div>
-
-  <!-- Tabela de ativos -->
-  <div class="assets-table">
-    <!-- Categoria FIS -->
-    <div class="asset-category">
-      <div class="category-header">
-        <div class="category-expand-icon">►</div>
-        <div class="category-name">FIS</div>
-        <div class="category-count">0 ATIVOS</div>
-        <div class="category-value">VALOR TOTAL: R$ 0,00</div>
-        <div class="category-variation">VARIAÇÃO: 0,00%</div>
-        <div class="category-percentage">% NA CARTEIRA: 0,00% (META: 20%)</div>
-      </div>
-      <!-- Conteúdo da categoria (vazio) -->
+  <section class="assets-section">
+    <div class="assets-header">
+      <h2>Ativos</h2>
+      <button class="add-asset-btn-secondary">Adicionar Ativo +</button>
     </div>
 
-    <!-- Categoria CRIPTOMOEDAS -->
-    <div class="asset-category expanded">
-      <div class="category-header">
-        <div class="category-expand-icon">▼</div>
-        <div class="category-name">CRIPTOMOEDAS</div>
-        <div class="category-count">12 ATIVOS</div>
-        <div class="category-value">VALOR TOTAL: R$ 5.000,00</div>
-        <div class="category-variation negative">VARIAÇÃO: 0,0%</div>
-        <div class="category-percentage">% NA CARTEIRA: 50% (META: 30%)</div>
+    <div class="assets-table-container">
+      <div class="asset-category">
+        <div class="category-header">
+          <div class="category-expand-icon">►</div>
+          <div class="category-name">FIS</div>
+          <div class="category-count">0 ATIVOS</div>
+          <div class="category-value">VALOR TOTAL: R$ 0,00</div>
+          <div class="category-variation">VARIAÇÃO: 0,00%</div>
+          <div class="category-percentage">% NA CARTEIRA: 0,00% (META: 20%)</div>
+        </div>
       </div>
 
-      <!-- Conteúdo da categoria (expandido) -->
-      <div class="category-content">
-        <table class="assets-table">
-          <thead>
-            <tr>
-              <th>Ativo</th>
-              <th>Quantidade</th>
-              <th>Preço Médio</th>
-              <th>Preço Atual</th>
-              <th>Variação</th>
-              <th>Rentabilidade</th>
-              <th>Saldo</th>
-              <th>Variação (24 horas)</th>
-              <th>Variação (30 dias)</th>
-              <th>Minha Nota</th>
-              <th>% Carteira</th>
-              <th>% Ideal</th>
-              <th>Comprar?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="asset-name">
-                <div class="asset-icon crypto"></div>
-                UNI
-              </td>
-              <td>00,00</td>
-              <td>R$ 00,32</td>
-              <td>R$ 00,85</td>
-              <td class="negative">-00,46%</td>
-              <td class="negative">-00,74%</td>
-              <td>R$ 1.022,18</td>
-              <td class="negative">-0,04%</td>
-              <td class="negative">-00,83%</td>
-              <td class="rating">10</td>
-              <td>00,05%</td>
-              <td>00,50%</td>
-              <td class="buy-status">NÃO</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="asset-category expanded">
+        <div class="category-header">
+          <div class="category-expand-icon">▼</div>
+          <div class="category-name">CRIPTOMOEDAS</div>
+          <div class="category-count">12 ATIVOS</div>
+          <div class="category-value">VALOR TOTAL: R$ 5.000,00</div>
+          <div class="category-variation neutral">VARIAÇÃO: 0,0%</div>
+          <div class="category-percentage">% NA CARTEIRA: 50% (META: 30%)</div>
+        </div>
+
+        <div class="category-content">
+          <table class="assets-table">
+            <thead>
+              <tr>
+                <th>Ativo</th>
+                <th>Quantidade</th>
+                <th>Preço Médio</th>
+                <th>Preço Atual</th>
+                <th>Variação</th>
+                <th>Rentabilidade</th>
+                <th>Saldo</th>
+                <th>Variação (24h)</th>
+                <th>Variação (30d)</th>
+                <th>Minha Nota</th>
+                <th>% Carteira</th>
+                <th>% Ideal</th>
+                <th>Comprar?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="asset-name">
+                  <div class="asset-icon crypto"></div>
+                  UNI
+                </td>
+                <td>0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td class="negative">-0,00%</td>
+                <td class="negative">-0,00%</td>
+                <td>R$ 0</td>
+                <td class="negative">-0,00%</td>
+                <td class="negative">-0,00%</td>
+                <td>
+                  <div class="rating">10</div>
+                </td>
+                <td>0,00%</td>
+                <td>0,00%</td>
+                <td class="buy-status">NÃO</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
